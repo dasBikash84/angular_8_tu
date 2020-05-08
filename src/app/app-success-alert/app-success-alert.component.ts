@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppSuccessAlertComponent implements OnInit {
 
+  buttonDisabled:Boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.buttonDisabled = false;
+    },2000);
+  }
+
+  onViewClick(event:Event){
+    console.log(event);
   }
 
 }

@@ -3,4 +3,9 @@ p {
     padding: 20px;
     border: 1px solid green;
     background-color: red;
+    margin: 10px;
+}
+
+button{
+    margin: 10px;
 }
