@@ -1,9 +1,0 @@
-<button class="btn btn-primary" (click)="toggleDetailsView()">Display Details</button>
-<p *ngIf="displayDetails">Para with content of my choice!!</p>
-<p 
-    *ngFor="let log of actionLog;let i=index" 
-    [ngStyle]="{backgroundColor: i>=4 ? 'blue' : 'yellow'}"
-    [ngClass]="{whiteText: i>=4,blueText: i<4}"
-    >
-    {{i + ") "+log}}
-</p>

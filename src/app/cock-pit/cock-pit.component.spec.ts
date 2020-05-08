@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AssignThreeComponent } from './assign-three.component';
+import { CockPitComponent } from './cock-pit.component';
 
-describe('AssignThreeComponent', () => {
-  let component: AssignThreeComponent;
-  let fixture: ComponentFixture<AssignThreeComponent>;
+describe('CockPitComponent', () => {
+  let component: CockPitComponent;
+  let fixture: ComponentFixture<CockPitComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AssignThreeComponent ]
+      declarations: [ CockPitComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AssignThreeComponent);
+    fixture = TestBed.createComponent(CockPitComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
