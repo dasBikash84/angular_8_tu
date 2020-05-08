@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppFailureAlertComponent implements OnInit {
 
+  inputTextValue:String = "";
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onTextInput(event:Event){
+    this.inputTextValue = (<HTMLInputElement>event.target).value;
   }
 
 }
