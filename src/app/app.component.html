@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <app-cock-pit [serverElements] = "serverElements"></app-cock-pit>
+        <app-cock-pit (addItemEvent) = "addServerElement($event)"></app-cock-pit>
       </div>
     </div>
     <hr>

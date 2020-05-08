@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Server } from '../server.model';
 
 @Component({
   selector: 'app-cock-pit',
@@ -7,12 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CockPitComponent implements OnInit {
 
-  @Input() serverElements = [];
+  @Output() addItemEvent = new EventEmitter<Server>()
+
   newServerName = '';
   newServerContent = '';
 
   onAddServer() {
-    this.serverElements.push({
+
+    this.addItemEvent.emit({
       type: 'server',
       name: this.newServerName,
       content: this.newServerContent
@@ -20,7 +23,7 @@ export class CockPitComponent implements OnInit {
   }
 
   onAddBlueprint() {
-    this.serverElements.push({
+    this.addItemEvent.emit({
       type: 'blueprint',
       name: this.newServerName,
       content: this.newServerContent
