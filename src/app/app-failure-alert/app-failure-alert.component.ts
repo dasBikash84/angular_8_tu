@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app-failure-alert.component.css']
 })
 export class AppFailureAlertComponent implements OnInit {
-
+  userName:String = ""
   constructor() { }
 
   ngOnInit(): void {
