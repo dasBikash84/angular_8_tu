@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CockPitComponent } from './cock-pit.component';
+import { EvenComponent } from './even.component';
 
-describe('CockPitComponent', () => {
-  let component: CockPitComponent;
-  let fixture: ComponentFixture<CockPitComponent>;
+describe('EvenComponent', () => {
+  let component: EvenComponent;
+  let fixture: ComponentFixture<EvenComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CockPitComponent ]
+      declarations: [ EvenComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CockPitComponent);
+    fixture = TestBed.createComponent(EvenComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

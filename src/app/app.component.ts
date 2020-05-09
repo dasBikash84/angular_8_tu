@@ -7,9 +7,11 @@ import { Server } from './server.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  serverElements:Server[] = [];
+  
+  receivedNums:number[] = [];
 
-  addServerElement(element:Server){
-      this.serverElements.push(element)
+  getEmittedNumber(event:number){
+    console.log('received: '+event);
+    this.receivedNums.push(event);
   }
 }

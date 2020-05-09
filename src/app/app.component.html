@@ -1,16 +1,12 @@
 <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <app-cock-pit (addItemEvent) = "addServerElement($event)"></app-cock-pit>
-      </div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-xs-12">
-        <div
-          class="panel panel-default"
-          *ngFor="let element of serverElements">
-          <app-server [element]="element"></app-server>
+        <app-game-controller (numberEmitter)="getEmittedNumber($event)"></app-game-controller>
+        <div *ngFor = "let num of receivedNums">
+          <app-odd *ngIf="num%2!==0">{{num}}</app-odd>
+        </div>
+        <div *ngFor = "let num of receivedNums">
+          <app-even *ngIf="num%2===0">{{num}}</app-even>
         </div>
       </div>
     </div>
