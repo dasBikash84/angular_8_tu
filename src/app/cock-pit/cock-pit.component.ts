@@ -10,23 +10,20 @@ export class CockPitComponent implements OnInit {
 
   @Output() addItemEvent = new EventEmitter<Server>()
 
-  newServerName = '';
-  newServerContent = '';
-
-  onAddServer() {
+  onAddServer(newServerName:HTMLInputElement,newServerContent:HTMLInputElement) {
 
     this.addItemEvent.emit({
       type: 'server',
-      name: this.newServerName,
-      content: this.newServerContent
+      name: newServerName.value,
+      content: newServerContent.value
     });
   }
 
-  onAddBlueprint() {
+  onAddBlueprint(newServerName:HTMLInputElement,newServerContent:HTMLInputElement) {
     this.addItemEvent.emit({
       type: 'blueprint',
-      name: this.newServerName,
-      content: this.newServerContent
+      name: newServerName.value,
+      content: newServerContent.value
     });
   }
 
